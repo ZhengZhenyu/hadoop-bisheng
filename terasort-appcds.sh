@@ -16,4 +16,7 @@ YARN_RESOURCEMANAGER_USER=root
 HADOOP_SECURE_DN_USER=yarn
 YARN_NODEMANAGER_USER=root
 
+
+rows=$((5*1024*1024*1024/100))
+
 bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.0.jar teragen -Dmapred.map.tasks=100 -Dmapreduce.map.java.opts="-Xshare:off -XX:+UseAppCDS -XX:DumpLoadedClassList=/opt/terasort.lst" ${rows} terasort/tera1-input
