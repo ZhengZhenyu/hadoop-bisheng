@@ -24,3 +24,5 @@ bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.0.jar terage
 bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.0.jar teragen -Dmapred.map.tasks=100 -Dmapreduce.map.java.opts="-Xshare:dump -XX:+UseAppCDS -XX:SharedClassListFile=/opt/terasort.lst -XX:SharedArchiveFile=/opt/terasort.jsa -XX:SharedReadWriteSize=20000000" ${rows} terasort/tera2-input
 
 bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.0.jar teragen -Dmapred.map.tasks=100 -Dmapreduce.map.java.opts="-Xshare:on -XX:+UseAppCDS -XX:SharedArchiveFile=/opt/terasort.jsa" ${rows} terasort/tera5-input
+
+bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.0.jar terasort -Dmapred.reduce.tasks=7 -Dmapreduce.map.java.opts="-Xshare:on -XX:+UseAppCDS -XX:SharedArchiveFile=/opt/terasort.jsa" -Dmapreduce.reduce.java.opts="-Xshare:on -XX:+UseAppCDS -XX:SharedArchiveFile=/opt/terasort.jsa" terasort/tera-input terasort/tera-output
