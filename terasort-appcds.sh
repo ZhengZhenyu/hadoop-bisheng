@@ -1,9 +1,11 @@
 wget https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_jdk/bisheng-jdk-8u262-linux-aarch64.tar.gz
 tar zxvf bisheng-jdk-8u262-linux-aarch64.tar.gz
  
+wget https://mirror.bit.edu.cn/apache/hadoop/common/hadoop-3.3.0/hadoop-3.3.0-aarch64.tar.gz
+tar zxvf hadoop-3.3.0-aarch64.tar.gz
 
 export JAVA_HOME=/opt/bisheng-jdk1.8.0_262/bin/
-echo "export JAVA_HOME=/opt/bisheng-jdk1.8.0_262/bin/" >> etc/hadoop/hadoop-env.sh
+echo "export JAVA_HOME=/opt/bisheng-jdk1.8.0_262/" >> etc/hadoop/hadoop-env.sh
 
 HDFS_DATANODE_USER=root
 HADOOP_SECURE_DN_USER=hdfs
