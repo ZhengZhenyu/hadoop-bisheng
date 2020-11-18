@@ -20,3 +20,5 @@ YARN_NODEMANAGER_USER=root
 rows=$((5*1024*1024*1024/100))
 
 bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.0.jar teragen -Dmapred.map.tasks=100 -Dmapreduce.map.java.opts="-Xshare:off -XX:+UseAppCDS -XX:DumpLoadedClassList=/opt/terasort.lst" ${rows} terasort/tera1-input
+
+bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.0.jar teragen -Dmapred.map.tasks=100 -Dmapreduce.map.java.opts="-Xshare:dump -XX:+UseAppCDS -XX:SharedClassListFile=/opt/terasort.lst -XX:SharedArchiveFile=/opt/terasort.jsa -XX:SharedReadWriteSize=20000000" ${rows} terasort/tera2-input
