@@ -4,6 +4,12 @@ tar zxvf bisheng-jdk-8u262-linux-aarch64.tar.gz
 wget https://mirror.bit.edu.cn/apache/hadoop/common/hadoop-3.3.0/hadoop-3.3.0-aarch64.tar.gz
 tar zxvf hadoop-3.3.0-aarch64.tar.gz
 
+ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod 0600 ~/.ssh/authorized_keys
+
+ssh-copy-id -i /root/.ssh/id_rsa.pub 192.168.137.129
+
 export JAVA_HOME=/opt/bisheng-jdk1.8.0_262/bin/
 echo "export JAVA_HOME=/opt/bisheng-jdk1.8.0_262/" >> etc/hadoop/hadoop-env.sh
 
