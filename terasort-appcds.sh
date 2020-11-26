@@ -13,6 +13,8 @@ ssh-copy-id -i /root/.ssh/id_rsa.pub 192.168.137.129
 export JAVA_HOME=/opt/bisheng-jdk1.8.0_262/bin/
 echo "export JAVA_HOME=/opt/bisheng-jdk1.8.0_262/" >> etc/hadoop/hadoop-env.sh
 
+mapred --daemon start historyserver
+
 HDFS_DATANODE_USER=root
 HADOOP_SECURE_DN_USER=hdfs
 HDFS_NAMENODE_USER=root
