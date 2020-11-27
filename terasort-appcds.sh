@@ -26,6 +26,7 @@ YARN_RESOURCEMANAGER_USER=root
 HADOOP_SECURE_DN_USER=yarn
 YARN_NODEMANAGER_USER=root
 
+bin/hdfs namenode -format
 
 rows=$((5*1024*1024*1024/100))
 
