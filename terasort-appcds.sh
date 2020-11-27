@@ -8,6 +8,8 @@ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 0600 ~/.ssh/authorized_keys
 
+curl ip.sb
+
 ssh-copy-id -i /root/.ssh/id_rsa.pub 192.168.137.129
 
 export JAVA_HOME=/opt/bisheng-jdk1.8.0_262/bin/
