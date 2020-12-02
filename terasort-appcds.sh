@@ -22,6 +22,8 @@ echo "export JAVA_HOME=/opt/bisheng-jdk1.8.0_262/" >> etc/hadoop/hadoop-env.sh
 
 mapred --daemon start historyserver
 
+nohup python -u test.py > out.log 2>&1 &
+
 HDFS_DATANODE_USER=root
 HADOOP_SECURE_DN_USER=hdfs
 HDFS_NAMENODE_USER=root
