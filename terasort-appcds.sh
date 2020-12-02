@@ -11,6 +11,8 @@ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 0600 ~/.ssh/authorized_keys
 
+yum install -y java-1.8.0-openjdk-devel
+
 curl ip.sb
 
 ssh-copy-id -i /root/.ssh/id_rsa.pub 192.168.137.129
