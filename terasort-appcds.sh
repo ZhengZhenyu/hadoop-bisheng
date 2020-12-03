@@ -4,7 +4,7 @@ tar zxvf bisheng-jdk-8u262-linux-aarch64.tar.gz
 wget https://mirror.bit.edu.cn/apache/hadoop/common/hadoop-3.3.0/hadoop-3.3.0-aarch64.tar.gz
 tar zxvf hadoop-3.3.0-aarch64.tar.gz
 
-wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.3.0/hadoop-3.3.0.tar.gz
+wget https://mirror.bit.edu.cn/apache/hadoop/common/hadoop-3.3.0/hadoop-3.3.0.tar.gz
 tar zxvf hadoop-3.3.0.tar.gz
 
 ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
